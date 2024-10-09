@@ -160,7 +160,9 @@
           <button class="navbar-link" data-nav-link>Galeria</button>
         </li>
 
-
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Logo</button>
+        </li>
 
         <li class="navbar-item">
           <button class="navbar-link" data-nav-link>Kontakt</button>
@@ -480,11 +482,6 @@
       <section class="projects">
 
 
-        <div class="filter-select-box">
-
-
-        </div>
-
         <ul class="project-list">
 
           <li class="project-item active" data-filter-item>
@@ -631,6 +628,35 @@
             </a>
           </li>
 
+          <li class="project-item active" data-filter-item>
+            <a href="#" class="open-modal" data-project="mockup"
+               data-title="Produkty promocyjne"
+               data-description="Nasze produkty promocyjne: skarpetki, długopisy, kubki i inne."
+
+               data-gallery='[
+         "./assets/images/gallery/mockups/1.png", "./assets/images/gallery/mockups/2.jpg",
+         "./assets/images/gallery/mockups/3.jpg", "./assets/images/gallery/mockups/4.png",
+         "./assets/images/gallery/mockups/5.jpg", "./assets/images/gallery/mockups/6.jpg",
+         "./assets/images/gallery/mockups/7.jpg", "./assets/images/gallery/mockups/8.png",
+         "./assets/images/gallery/mockups/9.png", "./assets/images/gallery/mockups/10.png",
+         "./assets/images/gallery/mockups/11.png"
+         ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/gallery/mockups/6.jpg" alt="Linia produkcyjna kart Visere" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">Produkty promocyjne</h3>
+
+              <p class="project-category">Marketing</p>
+
+            </a>
+          </li>
+
         </ul>
 
         <div id="project-modal" class="modal">
@@ -650,6 +676,48 @@
 
     </article>
 
+    <!--
+      - #LOGO
+    -->
+    <article data-page="logo">
+      <header>
+        <h2 class="h2 article-title">Logo</h2>
+      </header>
+
+      <section class="logo-section">
+        <h3>Nasze logo</h3>
+        <div class="our-logo">
+          
+          <p>Format pionowy (preferowany)</p>
+          <img src="assets/images/logo_pionowe.png" alt="logo">
+
+          <p>Format poziomy</p>
+          <img src="assets/images/logo_poziome.png" alt="logo">
+        </div>
+        <a href="assets/images/logo.svg" download="logo.svg">
+          <button type="button" id="downloadSvgLogo">Pobierz logo SVG</button>
+        </a>
+      </section>
+
+      <section class="customize-logo">
+        <h3>Dostosuj logo</h3>
+
+        <canvas id="logoCanvas" width="800" height="714"></canvas>
+
+        <form id="logoForm">
+          <label for="bgColor">Kolor tła:</label>
+          <input type="color" id="bgColor" name="bgColor" value="#000000">
+
+          <label for="logoColor">Kolor logo:</label>
+          <input type="color" id="logoColor" name="logoColor" value="#ffffff">
+
+          <label for="transparentBg">Przezroczyste tło:</label>
+          <input type="checkbox" id="transparentBg">
+
+          <button type="button" id="downloadLogo">Pobierz logo</button>
+        </form>
+      </section>
+    </article>
 
     <!--
       - #CONTACT
@@ -699,6 +767,7 @@
 </main>
 
 <script src="./assets/js/script.js"></script>
+<script src="./assets/js/canvas.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
